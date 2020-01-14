@@ -1,0 +1,15 @@
+{
+    "extends": "./tsconfig.base.json",
+    "compileOnSave": false,
+    "compilerOptions": {
+        "target": "es6",
+        "declaration": true,
+        "sourceMap": true,
+        "declarationMap": true,
+        "declarationDir": "../dist",
+        "outDir": "../dist"
+    },
+    "include": [
+        "../src/**/*.ts"
+    ]
+}

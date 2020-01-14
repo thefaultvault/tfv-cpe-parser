@@ -1,0 +1,35 @@
+{
+  "name": "tfv-cpe-parser",
+  "version": "1.0.0",
+  "description": "Common product enumeration parser.",
+  "main": "./dist/cpe-parser.js",
+  "types": "./dist/cpe-parser.d.ts",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "./node_modules/.bin/mocha -w ./test/**/*.spec.js",
+    "tsc": "./node_modules/.bin/tsc -w",
+    "release": "./node_modules/.bin/rimraf ./dist && ./node_modules/.bin/tsc -p configs/tsconfig.release.json"
+  },
+  "keywords": [
+    "tfv",
+    "cpe-parser",
+    "cpe",
+    "cpe23",
+    "common product enumeration",
+    "nist",
+    "thefaultvault"
+  ],
+  "author": "Jonathan Fasking",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/chai": "^4.2.4",
+    "@types/mocha": "^5.2.7",
+    "@types/node": "^12.12.7",
+    "rimraf": "^3.0.0",
+    "chai": "^4.2.0",
+    "mocha": "^6.2.2",
+    "typescript": "^3.7.2"
+  }
+}
