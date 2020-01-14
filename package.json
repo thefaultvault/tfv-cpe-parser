@@ -1,5 +1,5 @@
 {
-  "name": "tfv-cpe-parser",
+  "name": "@thefaultvault/tfv-cpe-parser",
   "version": "1.0.0",
   "description": "Common product enumeration parser.",
   "main": "./dist/cpe-parser.js",
@@ -31,5 +31,14 @@
     "chai": "^4.2.0",
     "mocha": "^6.2.2",
     "typescript": "^3.7.2"
-  }
+  },
+  "dependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thefaultvault/tfv-cpe-parser.git"
+  },
+  "bugs": {
+    "url": "https://github.com/thefaultvault/tfv-cpe-parser/issues"
+  },
+  "homepage": "https://github.com/thefaultvault/tfv-cpe-parser#readme"
 }
