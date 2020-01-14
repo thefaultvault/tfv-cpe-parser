@@ -8,9 +8,9 @@
     "test": "test"
   },
   "scripts": {
-    "test": "mocha -w ./test/**/*.spec.js",
-    "tsc": "tsc -w",
-    "release": "rimraf ./dist && ./node_modules/.bin/tsc -p configs/tsconfig.release.json"
+    "test": "./node_modules/.bin/mocha -w ./test/**/*.spec.js",
+    "tsc": "./node_modules/.bin/tsc -w",
+    "release": "./node_modules/.bin/rimraf ./dist && ./node_modules/.bin/tsc -p configs/tsconfig.release.json"
   },
   "keywords": [
     "tfv",
