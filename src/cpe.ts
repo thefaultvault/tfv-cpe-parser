@@ -1,4 +1,25 @@
+/**
+ * Model to hold parsed cpe attribute values.
+ *
+ * @export
+ * @class Cpe
+ */
 export class Cpe {
+
+    constructor() {
+        this.edition = '*';
+        this.language = '*';
+        this.other = '*';
+        this.sw_edition = '*';
+        this.target_hw = '*';
+        this.target_sw = '*';
+        this.update = '*';
+        this.part = null;
+        this.product = null;
+        this.vendor = null;
+        this.version = null;
+    }
+
     /**
      * Classification of enumeration.
      * 
