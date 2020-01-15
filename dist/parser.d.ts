@@ -64,4 +64,4 @@ export declare class CpeParser {
      */
     private getCpeAttributesSubstring;
 }
-//# sourceMappingURL=cpe_parser.d.ts.map
+//# sourceMappingURL=parser.d.ts.map

@@ -137,4 +137,4 @@ class CpeParser {
     }
 }
 exports.CpeParser = CpeParser;
-//# sourceMappingURL=cpe_parser.js.map
+//# sourceMappingURL=parser.js.map
