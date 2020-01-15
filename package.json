@@ -2,8 +2,8 @@
   "name": "@thefaultvault/tfv-cpe-parser",
   "version": "1.2.0",
   "description": "Common product enumeration parser.",
-  "main": "./dist/cpe-parser.js",
-  "types": "./dist/cpe-parser.d.ts",
+  "main": "./dist/tfv_cpe_parser.js",
+  "types": "./dist/tfv_cpe_parser.d.ts",
   "directories": {
     "test": "test"
   },

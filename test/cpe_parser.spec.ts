@@ -1,7 +1,7 @@
 import { assert } from 'chai';
 
 import { Cpe } from '../src/cpe';
-import { CpeParser } from '../src/cpe_parser';
+import { CpeParser } from '../src/parser';
 
 const cpeParser = new CpeParser();
 
