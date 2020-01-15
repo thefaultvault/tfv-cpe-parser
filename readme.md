@@ -1,11 +1,11 @@
 # tfv-cpe-parser
-This library is used to parse cpe (common product enumerations) from NIST. Currently it will only parse
-cpe 23 strings. The parser will return an object with the corresponding values from the string.
+This library is used to parse cpe (common product enumerations) strings according to NIST standards. It can parse either uri binding cpe values or formatted binding cpe values. The parser will return an object with the corresponding values from the string.
 
 ### Examples
 ```javascript
 let cpeParser = new CpeParser();
-let cpe = cpeParser.parseCpe23(`cpe:2.3:h:f5:big-ip_protocol_security_manager:10.2.3:*:*:*:*:*:*:*`);
+//'formatted' binding
+let cpe = cpeParser.parse(`cpe:2.3:h:f5:big-ip_protocol_security_manager:10.2.3:*:*:*:*:*:*:*`);
 /** 
  * cpe => 
  *  {
@@ -22,7 +22,26 @@ let cpe = cpeParser.parseCpe23(`cpe:2.3:h:f5:big-ip_protocol_security_manager:10
  *       other: '*' 
  *   }
  * */
+//'uri' binding
+let cpe = cpeParser.parse(`cpe:/a:search_autocomplete_project:search_autocomplete:7.x-3.0:rc3:~~~drupal~~`);
+/** 
+ * cpe => 
+ *  {
+ *       part: 'a',
+ *       vendor: 'search autocomplete project',
+ *       product: 'search autocomplete',
+ *       version: '7.x-3.0',
+ *       update: 'rc3',
+ *       edition: '*',
+ *       language: '*',
+ *       sw_edition: '*',
+ *       target_sw: 'drupal',
+ *       target_hw: '*',
+ *       other: '*' 
+ *   }
+ * */
 ```
+Default values are returned as asterisks '*' that represent ANY.
 
 ### NIST Documentation
 This library follows the guidelines outline here: 

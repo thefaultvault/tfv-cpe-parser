@@ -8,13 +8,14 @@ class CpeParser {
         this._uriBindingExtendedAttributesDelimiterKey = ':~';
     }
     /**
-     * Parse a cpe 23 string value.
+     * Parse a cpe string value with either uri or formatted
+     * binding.
      *
      * @param {string} cpe
      * @returns {Cpe}
      * @memberof CpeParser
      */
-    parseCpe23(cpe) {
+    parse(cpe) {
         if (typeof cpe !== 'string' || !cpe)
             return null;
         let trimmedCpe = cpe.trim();

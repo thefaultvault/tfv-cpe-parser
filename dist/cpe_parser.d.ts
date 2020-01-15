@@ -4,13 +4,14 @@ export declare class CpeParser {
     private _formattedBindingPrefix;
     private _uriBindingExtendedAttributesDelimiterKey;
     /**
-     * Parse a cpe 23 string value.
+     * Parse a cpe string value with either uri or formatted
+     * binding.
      *
      * @param {string} cpe
      * @returns {Cpe}
      * @memberof CpeParser
      */
-    parseCpe23(cpe: string): Cpe;
+    parse(cpe: string): Cpe;
     /**
      * Get an attribute list from either a uri binding
      * or formatted binding cpe value. The cpeAttributes
