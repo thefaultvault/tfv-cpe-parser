@@ -1,4 +1,11 @@
+/**
+ * Model to hold parsed cpe attribute values.
+ *
+ * @export
+ * @class Cpe
+ */
 export declare class Cpe {
+    constructor();
     /**
      * Classification of enumeration.
      *

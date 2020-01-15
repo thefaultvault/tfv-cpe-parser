@@ -6,10 +6,8 @@ cpe 23 strings. The parser will return an object with the corresponding values f
 ```javascript
 let cpeParser = new CpeParser();
 let cpe = cpeParser.parseCpe23(`cpe:2.3:h:f5:big-ip_protocol_security_manager:10.2.3:*:*:*:*:*:*:*`);
-
 /** 
  * cpe => 
- * 
  *  {
  *       part: 'h',
  *       vendor: 'f5',
@@ -25,3 +23,7 @@ let cpe = cpeParser.parseCpe23(`cpe:2.3:h:f5:big-ip_protocol_security_manager:10
  *   }
  * */
 ```
+
+### NIST Documentation
+This library follows the guidelines outline here: 
+https://nvlpubs.nist.gov/nistpubs/Legacy/IR/nistir7695.pdf
