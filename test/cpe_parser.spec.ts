@@ -25,7 +25,7 @@ describe("Testing cpe parser", () => {
      * Formatted binding
      */
     it(`can parse valid 2.3 cpe string w/ formatted binding w/ an 'a' type`, function () {
-        const actual = cpeParser.parseCpe23(`cpe:2.3:a:subscribe2_project:subscribe2:10.17.2:*:*:*:*:wordpress:*:*`);
+        const actual = cpeParser.parse(`cpe:2.3:a:subscribe2_project:subscribe2:10.17.2:*:*:*:*:wordpress:*:*`);
         const expected = new Cpe();
         expected.part = 'a';
         expected.vendor = 'subscribe2 project';
@@ -42,7 +42,7 @@ describe("Testing cpe parser", () => {
     });
 
     it(`can parse valid 2.3 cpe string w/ formatted binding w/ an 'o' type`, function () {
-        const actual = cpeParser.parseCpe23(`cpe:2.3:o:juniper:netscreen_screenos:3.0.3r3:*:*:*:*:*:*:*`);
+        const actual = cpeParser.parse(`cpe:2.3:o:juniper:netscreen_screenos:3.0.3r3:*:*:*:*:*:*:*`);
         const expected = new Cpe();
         expected.part = 'o';
         expected.vendor = 'juniper';
@@ -59,7 +59,7 @@ describe("Testing cpe parser", () => {
     });
 
     it(`can parse valid 2.3 cpe string w/ formatted binding w/ an 'h' type`, function () {
-        const actual = cpeParser.parseCpe23(`cpe:2.3:h:f5:big-ip_protocol_security_manager:10.2.3:*:*:*:*:*:*:*`);
+        const actual = cpeParser.parse(`cpe:2.3:h:f5:big-ip_protocol_security_manager:10.2.3:*:*:*:*:*:*:*`);
         const expected = new Cpe();
         expected.part = 'h';
         expected.vendor = 'f5';
@@ -79,7 +79,7 @@ describe("Testing cpe parser", () => {
      * Uri binding
      */
     it(`can parse valid 2.3 cpe string w/ uri binding w/ an 'a' type w/ tildes`, function () {
-        const actual = cpeParser.parseCpe23(`cpe:/a:search_autocomplete_project:search_autocomplete:7.x-3.0:rc3:~~~drupal~~`);
+        const actual = cpeParser.parse(`cpe:/a:search_autocomplete_project:search_autocomplete:7.x-3.0:rc3:~~~drupal~~`);
         const expected = new Cpe();
         expected.part = 'a';
         expected.vendor = 'search autocomplete project';
@@ -96,7 +96,7 @@ describe("Testing cpe parser", () => {
     });
 
     it(`can parse valid 2.3 cpe string w/ uri binding w/ an 'o' type w/ no tildes`, function () {
-        const actual = cpeParser.parseCpe23(`cpe:/o:huawei:ecns210_td_firmware:v100r004c10spc410`);
+        const actual = cpeParser.parse(`cpe:/o:huawei:ecns210_td_firmware:v100r004c10spc410`);
         const expected = new Cpe();
         expected.part = 'o';
         expected.vendor = 'huawei';
@@ -113,7 +113,7 @@ describe("Testing cpe parser", () => {
     });
 
     it(`can parse valid 2.3 cpe string w/ uri binding w/ an 'h' type w/ no tildes`, function () {
-        const actual = cpeParser.parseCpe23(`cpe:/h:netgear:rp114:-`);
+        const actual = cpeParser.parse(`cpe:/h:netgear:rp114:-`);
         const expected = new Cpe();
         expected.part = 'h';
         expected.vendor = 'netgear';
