@@ -3,7 +3,8 @@ This library is used to parse cpe (common product enumerations) strings accordin
 
 ### Examples
 ```javascript
-let cpeParser = new CpeParser();
+const CPEParser = require('@thefaultvault/tfv-cpe-parser');
+const cpeParser = new CPEParser.CpeParser();
 //'formatted' binding
 let cpe = cpeParser.parse(`cpe:2.3:h:f5:big-ip_protocol_security_manager:10.2.3:*:*:*:*:*:*:*`);
 /** 
